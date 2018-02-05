@@ -1,0 +1,22 @@
+<p>hi</p>
+<ul>
+    <li ng-repeat="item in templateList">
+      {{item.author}}: {{item.content}} ({{item.timestamp}})
+      <!-- delete a message using $remove -->
+      <a href="" ng-click="templateList.$remove(item)">Delete</a>
+    </li>
+</ul>
+<form ng-submit="addTemplate()">
+  <input type="text" ng-model="template">
+  <input type="submit">
+</form>
+
+
+<div ng-show="firebaseUser">
+  <p>Hello, {{ firebaseUser.displayName }}</p>
+  <button ng-click="userAuth.$signOut()">Sign Out</button>
+</div>
+<div ng-hide="firebaseUser">
+  <p>Welcome, please sign in.</p>
+  <button ng-click="userAuth.$signInWithPopup('google')">Sign In With Google</button>
+</div>
