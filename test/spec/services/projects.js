@@ -1,18 +1,18 @@
 'use strict';
 
-describe('Service: UserAuth', function () {
+describe('Service: projects', function () {
 
   // load the service's module
   beforeEach(module('hipeWebApp'));
 
   // instantiate service
-  var UserAuth;
-  beforeEach(inject(function (_UserAuth_) {
-    UserAuth = _UserAuth_;
+  var projects;
+  beforeEach(inject(function (_projects_) {
+    projects = _projects_;
   }));
 
   it('should do something', function () {
-    expect(!!UserAuth).toBe(true);
+    expect(!!projects).toBe(true);
   });
 
 });

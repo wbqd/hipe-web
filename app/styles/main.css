@@ -1,7 +1,10 @@
 @import url('//fonts.googleapis.com/icon?family=Material+Icons');
-@import url('//cdn.jsdelivr.net/font-spoqa-han-sans/subset/spoqahansans-kr.css');
 @import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
 @import url('//fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic');
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
 
 .browsehappy {
   margin: 0.2em 0;
@@ -11,7 +14,7 @@
 }
 
 body {
-  font-family: 'Spoqa Han Sans', 'Noto Sans CJK KR', Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Noto Sans CJK KR', Roboto, "Helvetica Neue", sans-serif;
 }
 
 md-toolbar .md-avatar {
@@ -25,4 +28,18 @@ md-toolbar .md-avatar {
   margin-right: 16px;
   border-radius: 50%;
   box-sizing: content-box;
+}
+
+#blocklyDiv {
+  height: 600px;
+  width: 1200px;
+  /*padding: 0px !important;*/
+}
+
+#toolbox {
+  display: none;
+}
+
+#code {
+  height: 400px;
 }

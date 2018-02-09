@@ -1,22 +1,23 @@
-<p>hi</p>
-<ul>
-    <li ng-repeat="item in templateList">
-      {{item.author}}: {{item.content}} ({{item.timestamp}})
-      <!-- delete a message using $remove -->
-      <a href="" ng-click="templateList.$remove(item)">Delete</a>
-    </li>
-</ul>
-<form ng-submit="addTemplate()">
-  <input type="text" ng-model="template">
-  <input type="submit">
-</form>
-
-
-<div ng-show="firebaseUser">
-  <p>Hello, {{ firebaseUser.displayName }}</p>
-  <button ng-click="userAuth.$signOut()">Sign Out</button>
-</div>
-<div ng-hide="firebaseUser">
-  <p>Welcome, please sign in.</p>
-  <button ng-click="userAuth.$signInWithPopup('google')">Sign In With Google</button>
-</div>
+<md-content>
+  <md-list flex>
+    <md-subheader class="md-no-sticky">Your Projects List</md-subheader>
+    <md-list-item class="md-3-line" ng-repeat="item in projectList" ng-click="location.path('/projects/' + item.$id);">
+      <div class="md-list-item-text" layout="column">
+        <h3>{{ item.title }}</h3>
+        <h4>{{ item.code | limitTo: 100}}</h4>
+        <p>{{ item.timestamp | date : 'medium' }}</p>
+      </div>
+      <md-button class="md-icon-button" ng-click="projectList.$remove(item)">
+        <md-icon>delete</md-icon>
+      </md-button>
+    </md-list-item>
+  </md-list>
+</md-content>
+<md-fab-speed-dial class="md-fab-bottom-right">
+  <md-fab-trigger>
+    <md-button aria-label="add" class="md-fab md-accent" ng-click="new()">
+      <md-tooltip md-direction="top">New Project</md-tooltip>
+      <md-icon>add</md-icon>
+    </md-button>
+  </md-fab-trigger>
+</md-fab-speed-dial>
