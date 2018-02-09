@@ -26,7 +26,8 @@
 <md-toolbar>
 <!--<md-toolbar md-whiteframe="4">-->
   <div class="md-toolbar-tools">
-    <h2 md-truncate flex>High Level Interactive Programming Environment (HIPE)</h2>
+    <h2 md-truncate>High Level Interactive Programming Environment (HIPE)</h2>
+    <p class="md-subhead" flex>v0.0.1</p>
     <md-button ng-hide="firebaseUser" ng-click="auth.$signInWithPopup('google')">Login with Google</md-button>
     <!--<div ng-show="firebaseUser" layout="row">-->
       <!--<span class="md-subhead">Welcome, {{firebaseUser.displayName}}</span>-->
@@ -75,14 +76,14 @@
 <script src="scripts/services/auth.js"></script>
 <script src="scripts/controllers/index.js"></script>
 <script src="scripts/services/projects.js"></script>
-<script src="scripts/controllers/workspace.js"></script>
 <script src="scripts/controllers/newproject.js"></script>
 <script src="scripts/directives/toolbox.js"></script>
-<!-- endbuild -->
+<script src="scripts/controllers/updateproject.js"></script>
 <script src="blockly_compressed.js"></script>
 <script src="blocks_compressed.js"></script>
 <script src="cake_compressed.js"></script>
 <script src="en.js"></script>
+<!-- endbuild -->
 
 </body>
 </html>
